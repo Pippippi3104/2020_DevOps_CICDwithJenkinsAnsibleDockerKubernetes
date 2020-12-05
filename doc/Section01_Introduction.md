@@ -1,3 +1,4 @@
+<a id="contents"></a>
 ## Contents
 * [Tools used in this project](#tools)
 * [Topics Covered](#topics)
@@ -17,7 +18,9 @@
 * DevOps Flow
 ![Image](../src/Images/Section01/DevOpsFlow.png)
 
-<a id="tools"></a>
+* [Return to Contents](#contents)
+
+<a id="topics"></a>
 ## Topics Covered
 * Introduction
   * Introduction to CI/CD
