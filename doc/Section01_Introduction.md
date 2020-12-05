@@ -18,7 +18,7 @@
 * DevOps Flow
 ![Image](../src/Images/Section01/DevOpsFlow.png)
 
-###[Return to Contents](#contents)
+### [Return to Contents](#contents)
 
 <a id="topics"></a>
 ## Topics Covered
