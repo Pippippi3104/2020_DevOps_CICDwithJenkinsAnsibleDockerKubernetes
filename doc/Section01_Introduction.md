@@ -1,5 +1,7 @@
 ## Contents
 * [Tools used in this project](#tools)
+* [Topics Covered](#topics)
+* [What is CI/CD ?](#cicd)
 
 <a id="tools"></a>
 ## Tools used in this project
@@ -15,6 +17,7 @@
 * DevOps Flow
 ![Image](../src/Images/Section01/DevOpsFlow.png)
 
+<a id="tools"></a>
 ## Topics Covered
 * Introduction
   * Introduction to CI/CD
@@ -66,5 +69,6 @@
 * Deploy on Kubernetes
 ![Image](../src/Images/Section01/DeployOnKubernetes.png)
 
+<a id="cicd"></a>
 ## What is CI/CD ?
 * aaa
