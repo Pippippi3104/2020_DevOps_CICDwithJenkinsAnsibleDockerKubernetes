@@ -1,3 +1,10 @@
+<a id="contents"></a>
+## Contents
+* [Tools used in this project](#tools)
+* [Topics Covered](#topics)
+* [What is CI/CD ?](#cicd)
+
+<a id="tools"></a>
 ## Tools used in this project
 * DevOps Tools
   * git
@@ -11,6 +18,9 @@
 * DevOps Flow
 ![Image](../src/Images/Section01/DevOpsFlow.png)
 
+### [Return to Contents](#contents)
+
+<a id="topics"></a>
 ## Topics Covered
 * Introduction
   * Introduction to CI/CD
@@ -61,3 +71,19 @@
 
 * Deploy on Kubernetes
 ![Image](../src/Images/Section01/DeployOnKubernetes.png)
+
+### [Return to Contents](#contents)
+
+<a id="cicd"></a>
+## What is CI/CD ?
+
+* CI/CD
+  * Continuous Integration (CI)
+  * Continuous Delivery (CD)
+  * Continuous Deployment (CD)
+![Image](../src/Images/Section01/CICDflow.png)
+
+* DevOps Flow
+![Image](../src/Images/Section01/DevOpsCICDflow.png)
+
+### [Return to Contents](#contents)
