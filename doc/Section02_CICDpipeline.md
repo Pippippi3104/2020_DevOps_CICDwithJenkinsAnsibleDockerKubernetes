@@ -4,27 +4,35 @@
 
 ## Contents
 
-* [Tools used in this project](#tools)
-* [Topics Covered](#topics)
-* [What is CI/CD ?](#cicd)
-* [Resource to setup Simple CI/CD Pipeline](#resource)
-
-<a id="tools"></a>
+* [Installing Jenkins](#jenkins)
 
 
-## Tools used in this project
+<a id="jenkins"></a>
 
-* DevOps Tools
-  * git
-  * Jenkins
-  * maven
-  * ansible
-  * docker
-  * kubernets
-  * aws
+## Installing Jenkins
 
-* DevOps Flow
+### 1st : AWS Management Console
+
+* 1st : AWS Management Console
 ![Image](../src/Images/Section01/DevOpsFlow.png)
+
+* How to ?
+  * [MacからAWS EC2へのSSH接続方法メモ](https://gloria.cool/blog/20200528-aws-ssh/)
+    * Please run this.
+    ```
+    cd ~/.ssh/keys
+    cp -p ダウンロードした鍵.pem ./
+
+    chmod 600 ダウンロードした鍵.pem
+
+    ssh EC2アカウント名@IP -i ダウンロードした鍵.pem (例: ssh ec2-user@11.11.11.11 -i key.pem)
+    ```
+  * [Macで公開鍵と秘密鍵を生成する方法(.sshの作成方法)](https://qiita.com/wakahara3/items/52094d476774f3a2f619)
+    * Please run this if you have "/.ssh: No such file or directory".
+    ```
+    cd ~
+    mkdir ~/.ssh
+    ```
 
 ### [Return to Contents](#contents)
 
