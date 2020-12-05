@@ -105,6 +105,10 @@
 ## Resource to setup Simple CI/CD Pipeline
 
 * Please make 2 repositories
+  * Please clone below Github repositories before starting this course.
+    * [https://github.com/yankils/hello-world](https://github.com/yankils/hello-world)
+    * [https://github.com/yankils/Simple-DevOps-Project](https://github.com/yankils/Simple-DevOps-Project)
+    * [Technical discussion group:](https://www.facebook.com/groups/valaxytechnologies)
 ![Image](../src/Images/Section01/Git.png)
 
 * Please make AWS account
