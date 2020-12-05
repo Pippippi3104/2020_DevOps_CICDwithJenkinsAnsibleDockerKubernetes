@@ -11,6 +11,7 @@
 * DevOps Flow
   * Please check below.
     * src/Section01/DevOpsFlow.png
+[DevOpsFlow.png](../src/Section01/DevOpsFlow.png)
 
 ## Topics Covered
 * Introduction
