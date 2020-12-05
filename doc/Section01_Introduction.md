@@ -9,7 +9,7 @@
   * aws
 
 * DevOps Flow
-![DevOpsFlow.png](../src/Images/Section01/DevOpsFlow.png)
+![Image](../src/Images/Section01/DevOpsFlow.png)
 
 ## Topics Covered
 * Introduction
@@ -26,7 +26,7 @@
   * Run CI/CD job
 
 * Deploy on EC2/VM
-![DevOpsFlow.png](../src/Images/Section01/DeployOnEC2VM.png)
+![Image](../src/Images/Section01/DeployOnEC2VM.png)
 
 * Introducing Docker
   * Setting up Docker environment
@@ -36,5 +36,28 @@
   * Run a job
   
 * Deploy on Docker using jenkins
-![DevOpsFlow.png](../src/Images/Section01/DeployOnDockerUsingJenkins.png)
+![Image](../src/Images/Section01/DeployOnDockerUsingJenkins.png)
 
+* Integration with Ansible
+  * Setting up Ansible environment
+  * Integrating Ansible with jenkins
+  * Writing a Ansible playbook to deploy on container
+  * Run a job
+
+* Deploy on Docker Host using Ansible
+![Image](../src/Images/Section01/DeployOnDockerHostUsingAnsible.png)
+
+* Introducing Docker
+  * Setting up Docker environment
+  * Managing Docker with Ansible
+  * DockerHub repository
+  * Writing a Docker file
+  * Run a job
+
+* Introducing Kubernetes
+  * Setting up Kubernetes environment
+  * Writing deployment and service files
+  * Run a job
+
+* Deploy on Kubernetes
+![Image](../src/Images/Section01/DeployOnKubernetes.png)
