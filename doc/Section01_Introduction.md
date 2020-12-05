@@ -26,8 +26,7 @@
   * Run CI/CD job
 
 * Deploy on EC2/VM
-  * Please check below.
-    * src/Images/Section01/DeployOnEC2VM.png
+![DevOpsFlow.png](../src/Images/Section01/DeployOnEC2VM.png)
 
 * Introducing Docker
   * Setting up Docker environment
@@ -35,3 +34,7 @@
   * DockerHub repository
   * Writing a Docker file
   * Run a job
+  
+* Deploy on Docker using jenkins
+![DevOpsFlow.png](../src/Images/Section01/DeployOnDockerUsingJenkins.png)
+
