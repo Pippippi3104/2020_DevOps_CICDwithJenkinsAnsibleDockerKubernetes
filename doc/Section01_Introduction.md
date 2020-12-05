@@ -35,7 +35,7 @@
   * Writing a Docker file
   * Run a job
   
-* Deploy on Docker using jenkins
+* Deploy on Docker using Jenkins
 ![Image](../src/Images/Section01/DeployOnDockerUsingJenkins.png)
 
 * Integration with Ansible
