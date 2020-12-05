@@ -1,11 +1,17 @@
 <a id="contents"></a>
+
 ## Contents
+
 * [Tools used in this project](#tools)
 * [Topics Covered](#topics)
 * [What is CI/CD ?](#cicd)
+* [Resource to setup Simple CI/CD Pipeline](#resource)
 
 <a id="tools"></a>
+
+
 ## Tools used in this project
+
 * DevOps Tools
   * git
   * Jenkins
@@ -20,8 +26,11 @@
 
 ### [Return to Contents](#contents)
 
+
 <a id="topics"></a>
+
 ## Topics Covered
+
 * Introduction
   * Introduction to CI/CD
   * Tools used to setup DevOps flow
@@ -74,7 +83,9 @@
 
 ### [Return to Contents](#contents)
 
+
 <a id="cicd"></a>
+
 ## What is CI/CD ?
 
 * CI/CD
@@ -85,5 +96,18 @@
 
 * DevOps Flow
 ![Image](../src/Images/Section01/DevOpsCICDflow.png)
+
+### [Return to Contents](#contents)
+
+
+<a id="resource"></a>
+
+## Resource to setup Simple CI/CD Pipeline
+
+* Please make 2 repositories
+![Image](../src/Images/Section01/Git.png)
+
+* Please make AWS account
+![Image](../src/Images/Section01/AWS.png)
 
 ### [Return to Contents](#contents)
