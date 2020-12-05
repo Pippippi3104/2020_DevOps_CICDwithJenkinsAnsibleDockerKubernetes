@@ -76,6 +76,14 @@
 
 <a id="cicd"></a>
 ## What is CI/CD ?
-* aaa
+
+* CI/CD
+  * Continuous Integration (CI)
+  * Continuous Delivery (CD)
+  * Continuous Deployment (CD)
+![Image](../src/Images/Section01/CICDflow.png)
+
+* DevOps Flow
+![Image](../src/Images/Section01/DevOpsCICDflow.png)
 
 ### [Return to Contents](#contents)
