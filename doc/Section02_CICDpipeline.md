@@ -76,7 +76,29 @@
     ```
     yum install java-1.8*
     ```
+  
+  * Check it and Get the path
+    ```
+    find /usr/lib/jvm/java-1.8* | head -n 3
+    ```
+    * Then you can get the path like (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64)
+  
+  * Move to .bash_profile
+    ```
+    cd ~
+    vi .bash_profile
+    ```
 
+  * Add some text under (# User specific environment and startup programs)
+    ```
+    JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64
+    PATH=$PATH:$HOME/bin:$JAVA_HOME
+    ```
+    
+  * Exit .bash_profile
+    ```
+    :wq
+    ```
 ### [Return to Contents](#contents)
 
 
