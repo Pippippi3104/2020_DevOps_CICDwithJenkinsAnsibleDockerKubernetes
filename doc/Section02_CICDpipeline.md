@@ -69,7 +69,12 @@
 ### 2nd : java
 
 * Flow of installing java
-  * ![Image](../src/Images/Section02/aws001.png)
+  * ![Image](../src/Images/Section02/java001.png)
+  * ![Image](../src/Images/Section02/java002.png)
+  * ![Image](../src/Images/Section02/java003.png)
+  * ![Image](../src/Images/Section02/java004.png)
+  * ![Image](../src/Images/Section02/java005.png)
+  * ![Image](../src/Images/Section02/java006.png)
 
 * Run these commands.
   * Install java
@@ -107,7 +112,7 @@
     echo $JAVA_HOME
     ```
     * Then you can see the path like (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64)
-    
+
 ### [Return to Contents](#contents)
 
 
