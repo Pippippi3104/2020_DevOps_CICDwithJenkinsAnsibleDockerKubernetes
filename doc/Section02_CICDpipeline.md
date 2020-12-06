@@ -92,13 +92,22 @@
   * Add some text under (# User specific environment and startup programs)
     ```
     JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64
-    PATH=$PATH:$HOME/bin:$JAVA_HOME
+    PATH=$PATH:$HOME/bin:$JAVA
     ```
-    
+
   * Exit .bash_profile
     ```
     :wq
     ```
+
+  * Check tha path (you need logout onece)
+    ```
+    exit
+    sudo su -
+    echo $JAVA_HOME
+    ```
+    * Then you can see the path like (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64)
+    
 ### [Return to Contents](#contents)
 
 
