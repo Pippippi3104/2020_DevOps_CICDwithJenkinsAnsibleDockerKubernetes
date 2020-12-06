@@ -5,11 +5,15 @@
 ## Contents
 
 * [Installing Jenkins](#jenkins)
+  * * [1st : AWS Management Console](#jenkins_aws)
+  * * [2nd : java](#jenkins_java)
 
 
 <a id="jenkins"></a>
 
 ## Installing Jenkins
+
+<a id="jenkins_aws"></a>
 
 ### 1st : AWS Management Console
 
@@ -58,9 +62,20 @@
       ```
     * ![Image](../src/Images/Section02/sudosu.png)
 
-### 2nd : JAVA
+### [Return to Contents](#contents)
 
-* Flow of installing JAVA
+<a id="jenkins_java"></a>
+
+### 2nd : java
+
+* Flow of installing java
+  * ![Image](../src/Images/Section02/aws001.png)
+
+* Run these commands.
+  * Install java
+    ```
+    yum install java-1.8*
+    ```
 
 ### [Return to Contents](#contents)
 
