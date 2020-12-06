@@ -38,11 +38,15 @@
       ```
       exit
       ```
-  * Run this if you can connect 
+  * Run this if you can connect AWS
+    * You can change acconut like (root@ip-00-00-00-00 ~) 
       ```
       sudo su - 
       ```
-    * You can change acconut like (root@ip-00-00-00-00 ~) 
+
+### 2nd : JAVA
+
+* Flow of installing JAVA
 
 ### [Return to Contents](#contents)
 
