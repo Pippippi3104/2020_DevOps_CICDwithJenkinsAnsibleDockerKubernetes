@@ -13,10 +13,10 @@
 
 ### 1st : AWS Management Console
 
-* 1st : AWS Management Console
+* Flow of Create AWS Management Console
 ![Image](../src/Images/Section01/DevOpsFlow.png)
 
-* How to ?
+* How to Connect SSH?
   * [MacからAWS EC2へのSSH接続方法メモ](https://gloria.cool/blog/20200528-aws-ssh/)
     * Please run this.
       ```
@@ -38,6 +38,11 @@
       ```
       exit
       ```
+  * Run this if you can connect 
+      ```
+      sudo su - 
+      ```
+    * You can change acconut like (root@ip-00-00-00-00 ~) 
 
 ### [Return to Contents](#contents)
 
