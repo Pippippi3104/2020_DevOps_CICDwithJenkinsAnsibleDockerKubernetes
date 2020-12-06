@@ -35,9 +35,9 @@
       ```
   * [SSH通信の接続と切断と終了の方法](https://www.hiramine.com/physicalcomputing/raspberrypi/ssh_connect.html)
     * Please run this.
-    ```
-    exit
-    ```
+      ```
+      exit
+      ```
 
 ### [Return to Contents](#contents)
 
