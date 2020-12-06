@@ -5,8 +5,9 @@
 ## Contents
 
 * [Installing Jenkins](#jenkins)
-  * * [1st : AWS Management Console](#jenkins_aws)
-  * * [2nd : java](#jenkins_java)
+  * [1st : AWS Management Console](#jenkins_aws)
+  * [2nd : java](#jenkins_java)
+  * [3rd : jenkins](#jenkins_jenkins)
 
 
 <a id="jenkins"></a>
@@ -115,6 +116,74 @@
 
 ### [Return to Contents](#contents)
 
+<a id="jenkins_jenkins"></a>
+
+### 3rd : jenkins
+
+* Flow of installing java
+  * ![Image](../src/Images/Section02/jenkins001.png)
+  * ![Image](../src/Images/Section02/jenkins002.png)
+  * ![Image](../src/Images/Section02/jenkins003.png)
+  * ![Image](../src/Images/Section02/jenkins004.png)
+  * ![Image](../src/Images/Section02/jenkins005.png)
+  * ![Image](../src/Images/Section02/jenkins006.png)
+  * ![Image](../src/Images/Section02/jenkins007.png)
+  * ![Image](../src/Images/Section02/jenkins008.png)
+  * ![Image](../src/Images/Section02/jenkins009.png)
+  * ![Image](../src/Images/Section02/jenkins010.png)
+  * ![Image](../src/Images/Section02/jenkins011.png)
+  * ![Image](../src/Images/Section02/jenkins012.png)
+  * ![Image](../src/Images/Section02/jenkins013.png)
+  * ![Image](../src/Images/Section02/jenkins014.png)
+  * ![Image](../src/Images/Section02/jenkins015.png)
+  * ![Image](../src/Images/Section02/jenkins016.png)
+  * ![Image](../src/Images/Section02/jenkins017.png)
+  * ![Image](../src/Images/Section02/jenkins018.png)
+  * ![Image](../src/Images/Section02/jenkins019.png)
+  * ![Image](../src/Images/Section02/jenkins020.png)
+  * ![Image](../src/Images/Section02/jenkins021.png)
+  * ![Image](../src/Images/Section02/jenkins022.png)
+  * ![Image](../src/Images/Section02/jenkins023.png)
+
+* Run these commands.
+  * Before installing jenkins, Please download this
+    * [Jenkins Redhat Packages](https://pkg.jenkins.io/redhat-stable/)
+    ```
+    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    ```
+
+  * Install jenkins
+    ```
+    yum install jenkins
+    ```
+  
+  * Then, check the jenkins service
+    ```
+    service jenkins start
+    service jenkins status
+    ```
+  
+  * After, check at webpage
+    * example) 3.14.146.56:8080
+    * You need password, so run this and get password
+    ```
+    cat /var/lib/jenkins/secrets/initialAdminPassword
+    ``` 
+    * Then you have like (f632175e84a54c1dbf29a86e6f21aff3)
+    * You should change your password at admin/configure (21aff3gg)
+      * Next time, you can enter (ID:admin, pass:21aff3gg)
+    
+    * Next, you must change at manage Jenkins / Global Tool Configuration
+      * JAVA_HOME
+      * /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64
+        * If you want to see it, run this
+        ```
+        echo $JAVA_HOME
+        ```
+
+### [Return to Contents](#contents)
 
 
 
