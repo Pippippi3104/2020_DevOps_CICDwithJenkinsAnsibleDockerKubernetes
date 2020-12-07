@@ -217,7 +217,32 @@
 ## Git setup
 
 * Flow of setting up the Git.
-  * ![Image](../src/Images/Section02/first01.png)
+  * ![Image](../src/Images/Section02/git01.png)
+  * ![Image](../src/Images/Section02/git02.png)
+  * ![Image](../src/Images/Section02/git03.png)
+  * ![Image](../src/Images/Section02/git04.png)
+  * ![Image](../src/Images/Section02/git05.png)
+  * ![Image](../src/Images/Section02/git06.png)
+  * ![Image](../src/Images/Section02/git07.png)
+  * ![Image](../src/Images/Section02/git08.png)
+  * ![Image](../src/Images/Section02/git09.png)
+  * ![Image](../src/Images/Section02/git10.png)
+  * ![Image](../src/Images/Section02/git11.png)
+
+* Run these commands.
+  * enter the jenkins server.
+     ```
+    ssh ec2-user@3.14.146.56 -i DevOps_project.pem
+    sudo su -
+
+    hostname jenkins
+    sudo su -
+     ```
+  
+  * Install Git
+    ```
+    yum install git -y
+    ```
 
 ### [Return to Contents](#contents)
 
