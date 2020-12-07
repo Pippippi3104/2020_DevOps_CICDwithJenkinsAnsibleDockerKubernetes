@@ -9,6 +9,7 @@
   * [2nd : java](#jenkins_java)
   * [3rd : jenkins](#jenkins_jenkins)
 * [Run First Jenkins Job](#jenkins_first)
+* [Git Setup](#jenkins_git)
 
 * You can enter the Jenkins
   * [How enter Jenkins?](#jenkins_enter)
@@ -207,6 +208,41 @@
   * ![Image](../src/Images/Section02/first08.png)
   * ![Image](../src/Images/Section02/first09.png)
   * ![Image](../src/Images/Section02/first10.png)
+
+### [Return to Contents](#contents)
+
+
+<a id="jenkins_git"></a>
+
+## Git setup
+
+* Flow of setting up the Git.
+  * ![Image](../src/Images/Section02/git01.png)
+  * ![Image](../src/Images/Section02/git02.png)
+  * ![Image](../src/Images/Section02/git03.png)
+  * ![Image](../src/Images/Section02/git04.png)
+  * ![Image](../src/Images/Section02/git05.png)
+  * ![Image](../src/Images/Section02/git06.png)
+  * ![Image](../src/Images/Section02/git07.png)
+  * ![Image](../src/Images/Section02/git08.png)
+  * ![Image](../src/Images/Section02/git09.png)
+  * ![Image](../src/Images/Section02/git10.png)
+  * ![Image](../src/Images/Section02/git11.png)
+
+* Run these commands.
+  * enter the jenkins server.
+     ```
+    ssh ec2-user@3.14.146.56 -i DevOps_project.pem
+    sudo su -
+
+    hostname jenkins
+    sudo su -
+     ```
+  
+  * Install Git
+    ```
+    yum install git -y
+    ```
 
 ### [Return to Contents](#contents)
 
