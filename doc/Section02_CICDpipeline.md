@@ -10,6 +10,7 @@
   * [3rd : jenkins](#jenkins_jenkins)
 * [Run First Jenkins Job](#jenkins_first)
 * [Git Setup](#jenkins_git)
+* [Maven Setup](#jenkins_maven)
 
 * You can enter the Jenkins
   * [How enter Jenkins?](#jenkins_enter)
@@ -248,4 +249,72 @@
     * path : /usr/bin/git
 
 ### [Return to Contents](#contents)
+
+
+<a id="jenkins_maven"></a>
+
+## Maven setup
+
+* Flow of setting up the Maven.
+  * ![Image](../src/Images/Section02/maven01.png)
+  * ![Image](../src/Images/Section02/maven02.png)
+  * ![Image](../src/Images/Section02/maven03.png)
+  * ![Image](../src/Images/Section02/maven04.png)
+  * ![Image](../src/Images/Section02/maven05.png)
+  * ![Image](../src/Images/Section02/maven06.png)
+  * ![Image](../src/Images/Section02/maven07.png)
+  * ![Image](../src/Images/Section02/maven08.png)
+  * ![Image](../src/Images/Section02/maven09.png)
+  * ![Image](../src/Images/Section02/maven10.png)
+  * ![Image](../src/Images/Section02/maven11.png)
+  * ![Image](../src/Images/Section02/maven12.png)
+  * ![Image](../src/Images/Section02/maven13.png)
+
+* Run these commends.
+  * Installing Maven
+    ```
+    pwd
+    cd /opt
+    ls -ltr
+
+    wget https://ftp.riken.jp/net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+    ```
+  * Make folder
+    ```
+    tar -xvzf apache-maven-3.6.3-bin.tar.gz
+    mv apache-maven-3.6.3 maven
+    cd maven
+    pwd
+    ```
+  * enter bash_profile
+    ```
+    vi ~/.bash_profile
+    ```
+  * Uptate bash_profile
+    ```
+    JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64
+    M2_HOME=/opt/maven
+    M2=/opt/maven/bin
+    PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2:$M2_HOME
+    ```
+    * Check at [Downloading Apache Maven](https://maven.apache.org/download.cgi)
+
+  * Check the M2 path
+    ```
+    exit
+    sudo su -
+    echo $M2
+    mvn --version
+    ```
+    * Then you can get like (/opt/maven/bin) and (Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+      Maven home: /opt/maven
+      Java version: 1.8.0_265, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64/jre
+      Default locale: en_US, platform encoding: UTF-8
+      OS name: "linux", version: "4.14.203-156.332.amzn2.x86_64", arch: "amd64", family: "unix")
+
+### [Return to Contents](#contents)
+
+
+
+
 
