@@ -9,6 +9,7 @@
   * [2nd : java](#jenkins_java)
   * [3rd : jenkins](#jenkins_jenkins)
 * [Run First Jenkins Job](#jenkins_first)
+* [Git Setup](#jenkins_git)
 
 * You can enter the Jenkins
   * [How enter Jenkins?](#jenkins_enter)
@@ -207,6 +208,16 @@
   * ![Image](../src/Images/Section02/first08.png)
   * ![Image](../src/Images/Section02/first09.png)
   * ![Image](../src/Images/Section02/first10.png)
+
+### [Return to Contents](#contents)
+
+
+<a id="jenkins_git"></a>
+
+## Git setup
+
+* Flow of setting up the Git.
+  * ![Image](../src/Images/Section02/first01.png)
 
 ### [Return to Contents](#contents)
 
