@@ -228,6 +228,7 @@
   * ![Image](../src/Images/Section02/git09.png)
   * ![Image](../src/Images/Section02/git10.png)
   * ![Image](../src/Images/Section02/git11.png)
+  * ![Image](../src/Images/Section02/git12.png)
 
 * Run these commands.
   * enter the jenkins server.
@@ -238,11 +239,13 @@
     hostname jenkins
     sudo su -
      ```
-  
   * Install Git
     ```
     yum install git -y
     ```
+  * Update Git Path
+    * Name : github
+    * path : /usr/bin/git
 
 ### [Return to Contents](#contents)
 
