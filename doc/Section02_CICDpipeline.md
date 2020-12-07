@@ -8,6 +8,10 @@
   * [1st : AWS Management Console](#jenkins_aws)
   * [2nd : java](#jenkins_java)
   * [3rd : jenkins](#jenkins_jenkins)
+* [Run First Jenkins Job](#jenkins_first)
+
+* You can enter the Jenkins
+  * [How enter Jenkins?](#jenkins_enter)
 
 
 <a id="jenkins"></a>
@@ -165,6 +169,8 @@
     service jenkins status
     ```
   
+  <a id="jenkins_enter"></a>
+
   * After, check at webpage
     * example) 3.14.146.56:8080
     * You need password, so run this and get password
@@ -186,4 +192,21 @@
 ### [Return to Contents](#contents)
 
 
+<a id="jenkins_first"></a>
+
+## Run First Jenkins Job
+
+* Flow of running first jenkins job.
+  * ![Image](../src/Images/Section02/first01.png)
+  * ![Image](../src/Images/Section02/first02.png)
+  * ![Image](../src/Images/Section02/first03.png)
+  * ![Image](../src/Images/Section02/first04.png)
+  * ![Image](../src/Images/Section02/first05.png)
+  * ![Image](../src/Images/Section02/first06.png)
+  * ![Image](../src/Images/Section02/first07.png)
+  * ![Image](../src/Images/Section02/first08.png)
+  * ![Image](../src/Images/Section02/first09.png)
+  * ![Image](../src/Images/Section02/first10.png)
+
+### [Return to Contents](#contents)
 
