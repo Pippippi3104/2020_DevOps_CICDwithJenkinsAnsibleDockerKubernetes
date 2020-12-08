@@ -11,8 +11,9 @@
 * [Run First Jenkins Job](#jenkins_first)
 * [Git Setup](#jenkins_git)
 * [Maven Setup](#jenkins_maven)
+* [Run First Maven Job](#jenkins_first)
 
-* You can enter the Jenkins
+###  You can enter the Jenkins
   * [How enter Jenkins?](#jenkins_enter)
 
 
@@ -313,6 +314,43 @@
       OS name: "linux", version: "4.14.203-156.332.amzn2.x86_64", arch: "amd64", family: "unix")
 
 ### [Return to Contents](#contents)
+
+
+<a id="maven_first"></a>
+
+## Run First Maven Job
+
+* Flow of running first maven job.
+  * ![Image](../src/Images/Section02/firstmaven01.png)
+  * ![Image](../src/Images/Section02/firstmaven02.png)
+  * ![Image](../src/Images/Section02/firstmaven03.png)
+  * ![Image](../src/Images/Section02/firstmaven04.png)
+  * ![Image](../src/Images/Section02/firstmaven05.png)
+  * ![Image](../src/Images/Section02/firstmaven06.png)
+  * ![Image](../src/Images/Section02/firstmaven07.png)
+  * ![Image](../src/Images/Section02/firstmaven08.png)
+  * ![Image](../src/Images/Section02/firstmaven09.png)
+  * ![Image](../src/Images/Section02/firstmaven10.png)
+  * ![Image](../src/Images/Section02/firstmaven11.png)
+
+* Before running, check the git repository.
+  * https://github.com/yankils/hello-world.git
+
+* After running first job, Please check workspace
+  ```
+  cd /var/lib/jenkins/workspace/
+  ls
+  ```
+  * you can get (My_First_Job  My_First_Maven_Build)
+  ```
+  cd My_First_Maven_Job
+  ls
+  cd webapp/target/
+  ls
+  ```
+
+### [Return to Contents](#contents)
+
 
 
 
