@@ -5,6 +5,7 @@
 ## Contents
 
 * [Setup Tomcat Server](#tomcat_set)
+* [Deploy a war file on Tomcat VM using Jenkins](#tomcat_deploy)
 
 
 <a id="tomcat_set"></a>
@@ -45,6 +46,8 @@
   * ![Image](../src/Images/Section03/tom031.png)
   * ![Image](../src/Images/Section03/tom032.png)
   * ![Image](../src/Images/Section03/tom033.png)
+
+<a id="tomcat_login"></a>
 
 * Running these commands.
   * You need IPv4 Public IP (18.221.14.206)
@@ -128,6 +131,64 @@
 
 ### [Return to Contents](#contents)
 
+
+<a id="tomcat_deploy"></a>
+
+## Deploy a war file on Tomcat VM using Jenkins
+
+* Flow of Setup Tomcat Server
+  * ![Image](../src/Images/Section03/depl001.png)
+  * ![Image](../src/Images/Section03/depl002.png)
+  * ![Image](../src/Images/Section03/depl003.png)
+  * ![Image](../src/Images/Section03/depl004.png)
+  * ![Image](../src/Images/Section03/depl005.png)
+  * ![Image](../src/Images/Section03/depl006.png)
+  * ![Image](../src/Images/Section03/depl007.png)
+  * ![Image](../src/Images/Section03/depl008.png)
+  * ![Image](../src/Images/Section03/depl009.png)
+  * ![Image](../src/Images/Section03/depl010.png)
+  * ![Image](../src/Images/Section03/depl011.png)
+  * ![Image](../src/Images/Section03/depl012.png)
+  * ![Image](../src/Images/Section03/depl013.png)
+  * ![Image](../src/Images/Section03/depl014.png)
+  * ![Image](../src/Images/Section03/depl015.png)
+  * ![Image](../src/Images/Section03/depl016.png)
+  * ![Image](../src/Images/Section03/depl017.png)
+  * ![Image](../src/Images/Section03/depl018.png)
+  * ![Image](../src/Images/Section03/depl019.png)
+  * ![Image](../src/Images/Section03/depl020.png)
+  * ![Image](../src/Images/Section03/depl021.png)
+  * ![Image](../src/Images/Section03/depl022.png)
+  * ![Image](../src/Images/Section03/depl023.png)
+  * ![Image](../src/Images/Section03/depl024.png)
+
+* Run these commends
+  * You need running at Tomcat server.
+    * [chack it to login](#tomcat_login)
+  ```
+  cat /opt/tomcat/conf/tomcat-users.xml
+  ```
+  * Then you can get these 
+    * username : deployer
+    * password : deployer
+  
+  * You need URL like (http://18.221.14.206:8080/)
+
+  * Before building, check it 
+    ```
+    cd /opt/tomcat
+    ls
+    cd webapps/
+    ls -l
+    ```
+  
+  * Check the URL
+    ```
+    ls -l
+    ```
+    * Then, go to (http://18.221.14.206:8080/webapp)
+
+### [Return to Contents](#contents)
 
 
 
