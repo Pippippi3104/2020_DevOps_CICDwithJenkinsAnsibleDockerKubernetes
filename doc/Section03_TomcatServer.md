@@ -6,6 +6,7 @@
 
 * [Setup Tomcat Server](#tomcat_set)
 * [Deploy a war file on Tomcat VM using Jenkins](#tomcat_deploy)
+* [Deploy on VM through PollSCM](#tomcat_vm)
 
 
 <a id="tomcat_set"></a>
@@ -190,5 +191,25 @@
 
 ### [Return to Contents](#contents)
 
+
+<a id="tomcat_vm"></a>
+
+## Deploy on VM through PollSCM
+
+* Flow of Setup Tomcat Server
+  * ![Image](../src/Images/Section03/depl001.png)
+
+* Run these commands.
+  * Before running this, move at jenkins
+  ```
+  git clone https://github.com/yankils/hello-world.git
+  cd hello-world
+  git pull
+  ```
+  ```
+  cd webapp/src/main/webapp/
+  ls
+  cat index.jsp
+  ```
 
 
