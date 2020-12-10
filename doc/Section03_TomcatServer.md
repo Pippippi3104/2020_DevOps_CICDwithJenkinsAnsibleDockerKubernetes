@@ -6,6 +6,7 @@
 
 * [Setup Tomcat Server](#tomcat_set)
 * [Deploy a war file on Tomcat VM using Jenkins](#tomcat_deploy)
+* [Deploy on VM through PollSCM](#tomcat_vm)
 
 
 <a id="tomcat_set"></a>
@@ -189,6 +190,58 @@
     * Then, go to (http://18.221.14.206:8080/webapp)
 
 ### [Return to Contents](#contents)
+
+
+<a id="tomcat_vm"></a>
+
+## Deploy on VM through PollSCM
+
+* Flow of Deploy on VM through PollSCM
+  * ![Image](../src/Images/Section03/vms001.png)
+  * ![Image](../src/Images/Section03/vms002.png)
+  * ![Image](../src/Images/Section03/vms003.png)
+  * ![Image](../src/Images/Section03/vms004.png)
+  * ![Image](../src/Images/Section03/vms005.png)
+  * ![Image](../src/Images/Section03/vms006.png)
+  * ![Image](../src/Images/Section03/vms007.png)
+  * ![Image](../src/Images/Section03/vms008.png)
+  * ![Image](../src/Images/Section03/vms009.png)
+  * ![Image](../src/Images/Section03/vms010.png)
+  * ![Image](../src/Images/Section03/vms011.png)
+
+* Run these commands.
+  * Before running this, move at jenkins
+  ```
+  git clone https://github.com/yankils/hello-world.git
+  cd hello-world
+  git pull
+  ```
+  ```
+  cd webapp/src/main/webapp/
+  ls
+  cat index.jsp
+  vi index.jsp
+  ```
+  <h1> Hello, Welcome to Simple DevOps Project !!   </h1>
+  <h2> Deploying on a kubernetes using ansible for Valaxy Technologies </h2>
+  <h2> Glad to see you here </h2>
+  <h2> Deploying on a VM </h2>
+  ```
+  ```
+  git status
+  git commit -m "modified index.jsp"
+  git add .
+  git commit -m "modified index.jsp"
+  git push origin master
+  ```
+  * Before running these, login at tomcat server
+  ```
+  sudo su -
+  sudo su -
+  cd /opt/tomcat/webapps/
+  ls -ltr
+  date
+  ```
 
 
 
