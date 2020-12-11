@@ -8,6 +8,9 @@
 * [Deploy a war file on Tomcat VM using Jenkins](#tomcat_deploy)
 * [Deploy on VM through PollSCM](#tomcat_vm)
 
+### If you restart Instance, check below.
+* [Change setting of URL](#tomcat_page)
+
 
 <a id="tomcat_set"></a>
 
@@ -172,6 +175,8 @@
   * Then you can get these 
     * username : deployer
     * password : deployer
+  
+  <a id="tomcat_page"></a>
   
   * You need URL like (http://18.221.14.206:8080/)
 
