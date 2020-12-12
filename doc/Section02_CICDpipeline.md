@@ -346,6 +346,7 @@
 
 * Before running, check the git repository.
   * https://github.com/yankils/hello-world.git
+  * You must check repository name. master? or main? or ,,,,
 
 * After running first job, Please check workspace
   ```
