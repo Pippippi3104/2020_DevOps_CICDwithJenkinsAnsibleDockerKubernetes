@@ -10,6 +10,7 @@
 
 ### If you restart Instance, check below.
 * [Change setting of URL](#tomcat_page)
+  * You need change setting of container' Tomcat URL.
 
 
 <a id="tomcat_set"></a>
