@@ -5,6 +5,10 @@
 ## Contents
 
 * [Docker Setup](#docker_set)
+* [Docker*Tomcat Image Issue](#docker_iss)
+
+### Trouble
+* If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
 
 
 <a id="docker_set"></a>
@@ -71,6 +75,66 @@
 ### [Return to Contents](#contents)
 
 
+<a id="docker_iss"></a>
 
+## Docker * Tomcat Image issue
+
+* Flow
+  * ![Image](../src/Images/Section04/iss001.png)
+  * ![Image](../src/Images/Section04/iss002.png)
+  * ![Image](../src/Images/Section04/iss003.png)
+  * ![Image](../src/Images/Section04/iss004.png)
+  * ![Image](../src/Images/Section04/iss005.png)
+  * ![Image](../src/Images/Section04/iss006.png)
+  * ![Image](../src/Images/Section04/iss007.png)
+  * ![Image](../src/Images/Section04/iss008.png)
+  * ![Image](../src/Images/Section04/iss009.png)
+  * ![Image](../src/Images/Section04/iss010.png)
+
+* Commands
+  * open tomcat page
+  ```
+  docker images
+  docker ps -a
+  docker rm 58ee54e9dcd3
+  ```
+  ```
+  docker run -d --name tomcat-container -p 8080:8080 tomcat
+  docker ps -a
+  ```
+  ```
+  docker exec -it tomcat-container /bin/bash
+  ls
+  cd webapps
+  ls
+  cd ..
+  cd webapps.dist/
+  ls
+  ```
+  ```
+  cp -R * ../webapps
+  cd ../webapps
+  ls
+  exit
+  ```
+  * check docker page
+    * https://hub.docker.com/_/tomcat
+  ```
+  docker images
+  docker pull tomcat:8.0
+  docker images
+  ```
+  * run another tomcat
+    * You must need open port 8081
+  ```
+  docker run -d --name tomcat-8 -p 8081:8080 tomcat:8.0
+  docker ps -a
+  ```
+  * If you want restart docker container, run this
+  ```
+  docker restart b6fe1e5b8656 
+  ```
+
+### [Return to Contents](#contents)
 
 
