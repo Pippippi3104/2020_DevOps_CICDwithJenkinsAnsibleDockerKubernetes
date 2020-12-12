@@ -7,6 +7,7 @@
 * [Docker Setup](#docker_set)
 * [Docker*Tomcat Image Issue](#docker_iss)
 * [Integrating DockerHost With Jenkins](#docker_jen)
+* [Jenkins Job to Copy Artifactson to DockerHost](#docker_job)
 
 ### Trouble
 * If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
@@ -183,5 +184,71 @@
   ```
 
 ### [Return to Contents](#contents)
+
+
+<a id="docker_job"></a>
+
+## Jenkins Job to Copy Artifactson to DockerHost
+
+* Flow
+  * ![Image](../src/Images/Section04/job001.png)
+  * ![Image](../src/Images/Section04/job002.png)
+  * ![Image](../src/Images/Section04/job003.png)
+  * ![Image](../src/Images/Section04/job004.png)
+  * ![Image](../src/Images/Section04/job005.png)
+  * ![Image](../src/Images/Section04/job006.png)
+  * ![Image](../src/Images/Section04/job007.png)
+  * ![Image](../src/Images/Section04/job008.png)
+  * ![Image](../src/Images/Section04/job009.png)
+  * ![Image](../src/Images/Section04/job010.png)
+  * ![Image](../src/Images/Section04/job011.png)
+  * ![Image](../src/Images/Section04/job012.png)
+  * ![Image](../src/Images/Section04/job013.png)
+  * ![Image](../src/Images/Section04/job014.png)
+  * ![Image](../src/Images/Section04/job015.png)
+  * ![Image](../src/Images/Section04/job016.png)
+  * ![Image](../src/Images/Section04/job017.png)
+  * ![Image](../src/Images/Section04/job018.png)
+
+* Commands
+  * work at jenkins
+  ```
+  cd /var/lib/jenkins/workspace
+  pwd
+  ls
+  cd Deploy_on_Tomcat_Server/
+  ls
+  cd webapp/
+  ls
+  cd target
+  pwd
+  ```
+  * work at docker-host
+  ```
+  cd /home/dockeradmin
+  su - dockeradmin
+  pwd
+  whoami
+  ```
+  ```
+  cd webapp/target/
+  ls
+  pwd
+  ```
+  ```
+  cd ..
+  cd ~
+  ls
+  rm -rf webapp/
+  ```
+  * build again, then check
+  ```
+  ls
+  pwd
+  ```
+
+### [Return to Contents](#contents)
+
+
 
 
