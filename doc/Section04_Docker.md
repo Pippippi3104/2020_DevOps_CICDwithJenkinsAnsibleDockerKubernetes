@@ -6,6 +6,7 @@
 
 * [Docker Setup](#docker_set)
 * [Docker*Tomcat Image Issue](#docker_iss)
+* [Integrating DockerHost With Jenkins](#docer_jen)
 
 ### Trouble
 * If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
@@ -133,6 +134,52 @@
   * If you want restart docker container, run this
   ```
   docker restart b6fe1e5b8656 
+  ```
+
+### [Return to Contents](#contents)
+
+
+<a id="docker_jen"></a>
+
+## Integrating DockerHost With Jenkins
+
+* Flow
+  * ![Image](../src/Images/Section04/jen001.png)
+  * ![Image](../src/Images/Section04/jen002.png)
+  * ![Image](../src/Images/Section04/jen003.png)
+  * ![Image](../src/Images/Section04/jen004.png)
+  * ![Image](../src/Images/Section04/jen005.png)
+  * ![Image](../src/Images/Section04/jen006.png)
+  * ![Image](../src/Images/Section04/jen007.png)
+  * ![Image](../src/Images/Section04/jen008.png)
+  * ![Image](../src/Images/Section04/jen009.png)
+  * ![Image](../src/Images/Section04/jen010.png)
+  * ![Image](../src/Images/Section04/jen011.png)
+  * ![Image](../src/Images/Section04/jen012.png)
+  * ![Image](../src/Images/Section04/jen013.png)
+  * ![Image](../src/Images/Section04/jen014.png)
+  * ![Image](../src/Images/Section04/jen015.png)
+  * ![Image](../src/Images/Section04/jen016.png)
+  * ![Image](../src/Images/Section04/jen017.png)
+  * ![Image](../src/Images/Section04/jen018.png)
+
+* Commands
+  * use docker-host
+  ```
+  useradd dockeradmin
+  passwd dockeradmin
+  ```
+  * pass : 21aff3gg
+  ```
+  cat /etc/group
+  usermod -aG docker dockeradmin
+  id dockeradmin
+  ```
+  * check the path
+  ```
+  pi addr
+  vi /etc/ssh/sshd_config
+  service sshd reload
   ```
 
 ### [Return to Contents](#contents)
