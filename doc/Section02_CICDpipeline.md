@@ -131,7 +131,10 @@
 
 ### 3rd : jenkins
 
-* Flow of installing java
+* Brfore installing jenkins, check setting of port 8080.
+  * It you did not open prot 8080, you can not access jenkins page
+
+* Flow of installing jenkins
   * ![Image](../src/Images/Section02/jenkins001.png)
   * ![Image](../src/Images/Section02/jenkins002.png)
   * ![Image](../src/Images/Section02/jenkins003.png)
