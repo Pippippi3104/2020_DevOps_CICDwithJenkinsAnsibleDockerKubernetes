@@ -62,11 +62,11 @@
   ```
 
 * You need tomcat URL
-  * https://ftp.yz.yamagata-u.ac.jp/pub/network/apache/tomcat/tomcat-8/v8.5.60/bin/apache-tomcat-8.5.60.tar.gz
+  * https://ftp.tsukuba.wide.ad.jp/software/apache/tomcat/tomcat-8/v8.5.61/bin/apache-tomcat-8.5.61.tar.gz
   ```
   sudo su - (Then, root@tomcat ~)
   cd /opt
-  wget https://ftp.yz.yamagata-u.ac.jp/pub/network/apache/tomcat/tomcat-8/v8.5.60/bin/apache-tomcat-8.5.60.tar.gz
+  wget https://ftp.tsukuba.wide.ad.jp/software/apache/tomcat/tomcat-8/v8.5.61/bin/apache-tomcat-8.5.61.tar.gz
   ```
 * Change filename to Tomcat
   ```
