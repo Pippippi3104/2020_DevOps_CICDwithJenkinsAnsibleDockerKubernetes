@@ -6,7 +6,7 @@
 
 * [Docker Setup](#docker_set)
 * [Docker*Tomcat Image Issue](#docker_iss)
-* [Integrating DockerHost With Jenkins](#docer_jen)
+* [Integrating DockerHost With Jenkins](#docker_jen)
 
 ### Trouble
 * If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
