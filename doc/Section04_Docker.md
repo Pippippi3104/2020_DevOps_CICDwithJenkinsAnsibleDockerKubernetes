@@ -9,6 +9,7 @@
 * [Integrating DockerHost With Jenkins](#docker_jen)
 * [Jenkins Job to Copy Artifactson to DockerHost](#docker_job)
 * [Create a Dockerfile](#docker_file)
+* [Deploy a war file on Docker container using Jenkins](#docker_dep)
 
 ### Trouble
 * If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
@@ -305,3 +306,52 @@
 ### [Return to Contents](#contents)
 
 
+<a id="docker_dep"></a>
+
+## Deploy a war file on Docker container using Jenkins
+
+* Flow
+  * ![Image](../src/Images/Section04/dep001.png)
+  * ![Image](../src/Images/Section04/dep002.png)
+  * ![Image](../src/Images/Section04/dep003.png)
+  * ![Image](../src/Images/Section04/dep004.png)
+  * ![Image](../src/Images/Section04/dep005.png)
+  * ![Image](../src/Images/Section04/dep006.png)
+  * ![Image](../src/Images/Section04/dep007.png)
+  * ![Image](../src/Images/Section04/dep008.png)
+  * ![Image](../src/Images/Section04/dep009.png)
+  * ![Image](../src/Images/Section04/dep010.png)
+
+* Commands
+  * work at dockeradmin
+  ```
+  pwd
+  ls
+  docker build -t devops-project .
+  rm -rf webapp.war
+  ```
+  ```
+  docker ps -a
+  docker images
+  docker rmi docker-project
+  ```
+  * write at Exec command
+  ```
+  cd /home/dockeradmin; docker build -t devops-image .; docker run -d --name devops-container -p 8080:8080 devops-image;
+  ```
+  * work at dockeradmin
+  ```
+  docker ps
+  docker ps -a
+  docker images
+  docker ps -a
+  ```
+  * You can open tomcat page if you run these
+  ```
+  docker exec -it devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+
+### [Return to Contents](#contents)
