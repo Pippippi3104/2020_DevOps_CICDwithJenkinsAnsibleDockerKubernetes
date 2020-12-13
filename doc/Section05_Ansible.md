@@ -5,6 +5,7 @@
 ## Contents
 
 * [Ansible Setup](#ansible_set)
+* [Integrating Ansible with Jenkins](#ansible_jen)
 
 ### Trouble
 * 
@@ -136,6 +137,51 @@
   ssh-copy-id localhost
   ```
   * pass: 21aff3gg
+
+### [Return to Contents](#contents)
+
+
+<a id="ansible_jen"></a>
+
+## Integrating Ansible with Jenkins
+
+* Flow
+  * ![Image](../src/Images/Section05/jen001.png)
+  * ![Image](../src/Images/Section05/jen002.png)
+  * ![Image](../src/Images/Section05/jen003.png)
+  * ![Image](../src/Images/Section05/jen004.png)
+  * ![Image](../src/Images/Section05/jen005.png)
+  * ![Image](../src/Images/Section05/jen006.png)
+  * ![Image](../src/Images/Section05/jen007.png)
+  * ![Image](../src/Images/Section05/jen008.png)
+  * ![Image](../src/Images/Section05/jen009.png)
+  * ![Image](../src/Images/Section05/jen010.png)
+  * ![Image](../src/Images/Section05/jen011.png)
+  * ![Image](../src/Images/Section05/jen012.png)
+  * ![Image](../src/Images/Section05/jen013.png)
+  * ![Image](../src/Images/Section05/jen014.png)
+
+* commands
+  * work at ansible-control-node
+  ```
+  ip addr
+  ```
+  * pass: 21aff3gg
+  ```
+  cd /opt
+  sudo mkdir docker
+  sudo chown -R ansadmin:ansadmin /opt/docker
+  ls -l /opt
+  ```
+  ```
+  cd docker
+  ls -l
+  pwd
+  ```
+  * You can see the file 'webapp.war' after building
+  ```
+  ls
+  ```
 
 ### [Return to Contents](#contents)
 
