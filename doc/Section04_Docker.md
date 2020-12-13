@@ -8,6 +8,7 @@
 * [Docker*Tomcat Image Issue](#docker_iss)
 * [Integrating DockerHost With Jenkins](#docker_jen)
 * [Jenkins Job to Copy Artifactson to DockerHost](#docker_job)
+* [Create a Dockerfile](#docker_file)
 
 ### Trouble
 * If you want open port XXXX, check [this](https://forums.aws.amazon.com/thread.jspa?threadID=307722)
@@ -250,5 +251,57 @@
 ### [Return to Contents](#contents)
 
 
+<a id="docker_file"></a>
+
+## Create a Dockerfile
+
+* Flow
+  * ![Image](../src/Images/Section04/file001.png)
+  * ![Image](../src/Images/Section04/file002.png)
+  * ![Image](../src/Images/Section04/file003.png)
+  * ![Image](../src/Images/Section04/file004.png)
+  * ![Image](../src/Images/Section04/file005.png)
+  * ![Image](../src/Images/Section04/file006.png)
+  * ![Image](../src/Images/Section04/file007.png)
+  * ![Image](../src/Images/Section04/file008.png)
+  * ![Image](../src/Images/Section04/file009.png)
+
+* Commands
+  * work at dockeradmin
+  ```
+  su - dockeradmin
+  ls
+  vi Dockerfile
+  ```
+  * write at Dockerfile
+  ```
+  FROM tomcat:latest
+
+  MAINTAINER AR Shankar
+
+  COPY ./webapp.war /usr/local/tomcat/webapps
+  ```
+  * work at dockeradmin
+  ```
+  docker ps
+  ls
+  docker build -t devops-project .
+  docker images
+  docker run --name devops-container -p 8080:8080 devops-project
+  ```
+  ```
+  docker ps -a
+  docker rm 52ea2d02d244
+  docker run -d --name devops-container -p 8080:8080 devops-project
+  ```
+  * You can open tomcat page if you run these
+  ```
+  docker exec -it devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+
+### [Return to Contents](#contents)
 
 
