@@ -257,6 +257,14 @@
 
 * Flow
   * ![Image](../src/Images/Section04/file001.png)
+  * ![Image](../src/Images/Section04/file002.png)
+  * ![Image](../src/Images/Section04/file003.png)
+  * ![Image](../src/Images/Section04/file004.png)
+  * ![Image](../src/Images/Section04/file005.png)
+  * ![Image](../src/Images/Section04/file006.png)
+  * ![Image](../src/Images/Section04/file007.png)
+  * ![Image](../src/Images/Section04/file008.png)
+  * ![Image](../src/Images/Section04/file009.png)
 
 * Commands
   * work at dockeradmin
@@ -285,6 +293,13 @@
   docker ps -a
   docker rm 52ea2d02d244
   docker run -d --name devops-container -p 8080:8080 devops-project
+  ```
+  * You can open tomcat page if you run these
+  ```
+  docker exec -it devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
   ```
 
 ### [Return to Contents](#contents)
