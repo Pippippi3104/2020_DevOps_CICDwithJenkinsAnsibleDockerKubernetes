@@ -10,3 +10,6 @@
 
 * Section04
   * Integrating Docker in CI/CD Pipeline
+
+* Section05
+  * Integration Ansible in CI/CD pipeline
