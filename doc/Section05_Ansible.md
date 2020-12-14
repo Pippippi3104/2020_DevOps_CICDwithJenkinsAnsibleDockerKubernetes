@@ -6,9 +6,16 @@
 
 * [Ansible Setup](#ansible_set)
 * [Integrating Ansible with Jenkins](#ansible_jen)
+* [Creating an Ansible Playbook](#ansible_book)
 
 ### Trouble
-* 
+* Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+  * Run these commands
+  ```
+  service docker status
+  sudo service docker start
+  ```
+  * [WSL上でDockerを動かす際に躓いたこと](https://qiita.com/neight0903/items/ef0e2170b712b194c3fc)
 
 
 <a id="ansible_set"></a>
@@ -186,6 +193,100 @@
 ### [Return to Contents](#contents)
 
 
+<a id="ansible_book"></a>
 
+## Creating an Ansible Playbook
+
+* Flow
+  * ![Image](../src/Images/Section05/book001.png)
+  * ![Image](../src/Images/Section05/book002.png)
+  * ![Image](../src/Images/Section05/book003.png)
+  * ![Image](../src/Images/Section05/book004.png)
+  * ![Image](../src/Images/Section05/book005.png)
+  * ![Image](../src/Images/Section05/book006.png)
+  * ![Image](../src/Images/Section05/book007.png)
+  * ![Image](../src/Images/Section05/book008.png)
+  * ![Image](../src/Images/Section05/book009.png)
+  * ![Image](../src/Images/Section05/book010.png)
+  * ![Image](../src/Images/Section05/book011.png)
+  * ![Image](../src/Images/Section05/book012.png)
+  * ![Image](../src/Images/Section05/book013.png)
+
+* commands
+  * work at ansible, (ansible-control-node docker)
+  ```
+  su - ansadmin
+  cd /opt/docker
+  ls
+  pwd
+  ```
+  * work at docker-host
+  ```
+  cd /home/dockeradmin/
+  ls
+  cat Dockerfile
+  ```
+  * work at ansible
+  ```
+  vi Dockerfile
+  FROM tomcat:latest
+  
+  MAINTAINER AR Shankar
+
+  COPY ./webapp.war /usr/local/tomcat/webapps
+  ```
+  * [Ansibleのローカル実行(ansible-playが動かない時)](https://qiita.com/hiroyuki_onodera/items/e6d0d308eb44e26fa03f)
+  ```
+  vi simple-devops-image.yml
+  ---
+  - hosts: localhost
+    become: true
+  
+    tasks:
+    - name: build docker image using war file
+      command: docker build -t simple-devops-image .
+      args:
+        chdir: /opt/docker
+  ```
+  ```
+  docker images
+  docker ps -a
+  ls
+  cat /etc/ansible/hosts
+  cat simple-devops-image.yml
+  ansible-playbook -i hosts simple-devops-image.yml --check
+  ansible-playbook -i hosts simple-devops-image.yml
+  docker images
+  ```
+  ```
+  ---
+  vi simple-devops-image.yml
+  - hosts: localhost
+    become: true
+
+    tasks:
+    - name: build docker image using war file
+      command: docker build -t simple-devops-image .
+      args:
+        chdir: /opt/docker
+
+    - name: create container using simple-devops-image
+      command: docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image
+  ```
+  ```
+  mv simple-devops-image.yml simple-devops-project.yml
+  ansible-playbook -i hosts simple-devops-project.yml
+  docker images
+  docker ps -a
+  ```
+  * You can open tomcat page if you run these
+  ```
+  docker exec -it simple-devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+
+### [Return to Contents](#contents)
 
 
