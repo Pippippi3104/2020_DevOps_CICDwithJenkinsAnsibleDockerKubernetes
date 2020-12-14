@@ -7,6 +7,7 @@
 * [Ansible Setup](#ansible_set)
 * [Integrating Ansible with Jenkins](#ansible_jen)
 * [Creating an Ansible Playbook](#ansible_book)
+* [Common issue faced during practice](#ansible_iss)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -288,5 +289,24 @@
   ```
 
 ### [Return to Contents](#contents)
+
+
+<a id="ansible_iss"></a>
+
+## Common issue faced during practice
+
+* Flow
+  * ![Image](../src/Images/Section05/iss001.png)
+  * ![Image](../src/Images/Section05/iss002.png)
+  * ![Image](../src/Images/Section05/iss003.png)
+  * ![Image](../src/Images/Section05/iss004.png)
+  * ![Image](../src/Images/Section05/iss005.png)
+  * ![Image](../src/Images/Section05/iss006.png)
+
+* commands
+
+### [Return to Contents](#contents)
+
+
 
 
