@@ -8,6 +8,7 @@
 * [Integrating Ansible with Jenkins](#ansible_jen)
 * [Creating an Ansible Playbook](#ansible_book)
 * [Common issue faced during practice](#ansible_iss)
+* [Run Ansible Playbook From Jenkins](#ansible_run)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -307,6 +308,78 @@
 
 ### [Return to Contents](#contents)
 
+
+<a id="ansible_run"></a>
+
+## Run Ansible Playbook From Jenkins
+
+* Flow
+  * ![Image](../src/Images/Section05/run001.png)
+  * ![Image](../src/Images/Section05/run002.png)
+  * ![Image](../src/Images/Section05/run003.png)
+  * ![Image](../src/Images/Section05/run004.png)
+  * ![Image](../src/Images/Section05/run005.png)
+  * ![Image](../src/Images/Section05/run006.png)
+  * ![Image](../src/Images/Section05/run007.png)
+  * ![Image](../src/Images/Section05/run008.png)
+  * ![Image](../src/Images/Section05/run009.png)
+  * ![Image](../src/Images/Section05/run010.png)
+  * ![Image](../src/Images/Section05/run011.png)
+  * ![Image](../src/Images/Section05/run012.png)
+  * ![Image](../src/Images/Section05/run013.png)
+  * ![Image](../src/Images/Section05/run014.png)
+
+* commands
+  * work at ansible-control-node docker
+  ```
+  cd /opt/docker
+  pwd
+  docker images
+  docker ps -a
+  ```
+  ```
+  docker stop 7fd2258f8f4f
+  docker rm 7fd2258f8f4f
+  docker rmi simple-devops-image tomcat
+  docker images
+  docker ps -a
+  ```
+  * write at Exec command
+  ```
+  ansible-playbook -i /opt/docker/hosts /opt/docker/simple-devops-project.yml;
+  ```
+  * work at ansible-control-node docker
+  ```
+  docker images
+  docker ps -a
+  ```
+  * You can open tomcat page if you run these
+  ```
+  docker exec -it simple-devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+  * work at jenkins
+  ```
+  ls
+  cd hello-world/
+  ls
+  vi webapp/src/main/webapp/index.jsp
+  <h2> Deploying on a container </h2>
+  ```
+  ```
+  git status
+  git add .
+  git commit -m "modified index file to test with docker"
+  git push
+  ```
+  * you can use if you want to merge
+  ```
+  git merge --abort
+  ```
+
+### [Return to Contents](#contents)
 
 
 
