@@ -9,6 +9,7 @@
 * [Creating an Ansible Playbook](#ansible_book)
 * [Common issue faced during practice](#ansible_iss)
 * [Run Ansible Playbook From Jenkins](#ansible_run)
+  * Still have problem !
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -98,8 +99,8 @@
   ```
   usermod -aG docker ansadmin
   vi /etc/ssh/sshd_config
-  /Password
   ```
+  * using '/Password' then you can access 
   * no → yes
   ```
   service sshd reload
@@ -144,6 +145,7 @@
   ```
   ansible all -m ping
   ssh-copy-id localhost
+  ansible all -m ping
   ```
   * pass: 21aff3gg
 
@@ -365,6 +367,7 @@
   ls
   cd hello-world/
   ls
+  git pull
   vi webapp/src/main/webapp/index.jsp
   <h2> Deploying on a container </h2>
   ```
