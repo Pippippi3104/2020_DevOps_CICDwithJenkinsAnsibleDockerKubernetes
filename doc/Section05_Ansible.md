@@ -13,6 +13,7 @@
     * always stop auto building !
 * [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
 * [DockerHub Integration with Ansible](#ansible_dochub)
+* [Tagging Docker Image Using Ansible Playbooks](#ansible_tag)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -498,6 +499,98 @@
   docker images
   docker pull pippippi/simple-devops-image
   docker images
+  ```
+
+### [Return to Contents](#contents)
+
+
+<a id="ansible_tag"></a>
+
+## Tagging Docker Image Using Ansible Playbooks
+
+* Flow
+  * ![Image](../src/Images/Section05/tag001.png)
+  * ![Image](../src/Images/Section05/tag002.png)
+  * ![Image](../src/Images/Section05/tag003.png)
+  * ![Image](../src/Images/Section05/tag004.png)
+  * ![Image](../src/Images/Section05/tag005.png)
+  * ![Image](../src/Images/Section05/tag006.png)
+  * ![Image](../src/Images/Section05/tag007.png)
+  * ![Image](../src/Images/Section05/tag008.png)
+  * ![Image](../src/Images/Section05/tag009.png)
+  * ![Image](../src/Images/Section05/tag010.png)
+  * ![Image](../src/Images/Section05/tag011.png)
+  * ![Image](../src/Images/Section05/tag012.png)
+  * ![Image](../src/Images/Section05/tag013.png)
+  * ![Image](../src/Images/Section05/tag014.png)
+
+* commands
+  * work at ansible-control-node docker
+  ```
+  pwd (/opt/docker)
+  ls
+  vi create-simple-devops-image.yml
+  ```
+  ```
+  ---
+  - hosts: localhost
+    become: true
+    
+    tasks:
+    - name: create docker image using war file
+      command: docker build -t simple-devops-image:latest .
+      args:
+        chdir: /opt/docker
+        
+    - name: create tag to image
+      command: docker tag simple-devops-image pippippi/simple-devops-image
+      
+    - name: push image on to dockerhub
+      command: docker push pippippi/simple-devops-image
+      
+    - name: remove docker images from ansible server
+      command: docker rmi simple-devops-image:latest pippippi/simple-devops-image
+      ignore_errors: yes
+  ```
+  ```
+  ls
+  ansible-playbook -i hosts create-simple-devops-image.yml
+  docker images
+  docker ps -a
+  docker rm -f cf62d49d16de
+  docker rmi pippippi/simple-devops-image
+  cat hosts
+  ansible-playbook -i hosts create-simple-devops-image.yml
+  docker images
+  docker ps -a
+  ```
+  ```
+  vi create-simple-devops-project.yml
+  ---
+  - hosts: localhost
+    become: true
+
+    tasks:
+    - name: stop current running container
+      command: docker stop simple-devops-container
+      ignore_errors: yes
+
+    - name: remove stopped container
+      command: docker rm simple-devops-container
+      ignore_errors: yes
+
+    - name: remove docker image
+      command: docker rmi pippippi/simple-devops-image:latest
+      ignore_errors: yes
+
+    - name: pull docker image from dockerhub
+      command: docker pull pippippi/simple-devops-image:latest
+
+    - name: craete container using simple-devops-image
+      command: docker run -d --name simple-devops-container -p 8080:8080 pippippi/simple-devops-image:latest
+  ```
+  ```
+  ansible-playbook -i hosts create-simple-devops-project.yml
   ```
 
 ### [Return to Contents](#contents)
