@@ -9,8 +9,9 @@
 * [Creating an Ansible Playbook](#ansible_book)
 * [Common issue faced during practice](#ansible_iss)
 * [Run Ansible Playbook From Jenkins](#ansible_run)
-* [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
   * Still have problem !
+    * always stop auto building !
+* [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
