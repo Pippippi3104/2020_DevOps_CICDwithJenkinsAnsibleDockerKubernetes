@@ -453,10 +453,52 @@
 
 ## DockerHub Integration with Ansible
 
+* Make your account
+  * [Docker Hub](https://hub.docker.com/)
+
 * Flow
-  * ![Image](../src/Images/Section05/update001.png)
+  * ![Image](../src/Images/Section05/dochub001.png)
+  * ![Image](../src/Images/Section05/dochub002.png)
+  * ![Image](../src/Images/Section05/dochub003.png)
+  * ![Image](../src/Images/Section05/dochub004.png)
+  * ![Image](../src/Images/Section05/dochub005.png)
+  * ![Image](../src/Images/Section05/dochub006.png)
+  * ![Image](../src/Images/Section05/dochub007.png)
+  * ![Image](../src/Images/Section05/dochub008.png)
+  * ![Image](../src/Images/Section05/dochub009.png)
+  * ![Image](../src/Images/Section05/dochub010.png)
+  * ![Image](../src/Images/Section05/dochub011.png)
+  * ![Image](../src/Images/Section05/dochub012.png)
+  * ![Image](../src/Images/Section05/dochub013.png)
+  * ![Image](../src/Images/Section05/dochub014.png)
 
 * commands
+  * work at ansible-contorol-node
+  ```
+  cd /opt/docker
+  docker images
+  docker tag simple-devops-image pippippi/simple-devops-image
+  docker push pippippi/simple-devops-image
+  ```
+  ```
+  docker login (pippippi)
+  docker push
+  docker rmi pippippi/simple-devops-image
+  docker pull pippippi/simple-devops-image
+  ```
+  * work at docker-host
+  ```
+  su - ansadmin
+  id
+  eixt
+  usermod -aG docker ansadmin
+  id
+  ```
+  ```
+  docker images
+  docker pull pippippi/simple-devops-image
+  docker images
+  ```
 
 ### [Return to Contents](#contents)
 
