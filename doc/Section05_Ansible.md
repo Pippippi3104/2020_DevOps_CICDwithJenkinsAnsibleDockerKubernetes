@@ -9,6 +9,7 @@
 * [Creating an Ansible Playbook](#ansible_book)
 * [Common issue faced during practice](#ansible_iss)
 * [Run Ansible Playbook From Jenkins](#ansible_run)
+* [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
   * Still have problem !
 
 ### Trouble
@@ -385,4 +386,63 @@
 ### [Return to Contents](#contents)
 
 
+<a id="andible_update"></a>
+
+## Update Ansible Playbook to Delete and Create Docker Container
+
+* Flow
+  * ![Image](../src/Images/Section05/update001.png)
+  * ![Image](../src/Images/Section05/update002.png)
+  * ![Image](../src/Images/Section05/update003.png)
+  * ![Image](../src/Images/Section05/update004.png)
+  * ![Image](../src/Images/Section05/update005.png)
+  * ![Image](../src/Images/Section05/update006.png)
+  * ![Image](../src/Images/Section05/update007.png)
+  * ![Image](../src/Images/Section05/update008.png)
+  * ![Image](../src/Images/Section05/update009.png)
+
+* commands
+  * work at ansible-contorol-node
+  ```
+  cd /opt/docker
+  pwd
+  vi simple-devops-project.yml
+  ```
+  ```
+  - name: stop current running container
+    command: docker stop simple-devops-container
+    ignore_errors: yes
+
+  - name: remove stopped container
+    command: docker rm simple-devops-container
+    ignore_errors: yes
+
+  - name: remove docker image
+    command: docker rmi simple-devops-image
+    ignore_errors: yes
+  ```
+  ```
+  cat simple-devops-project.yml
+  ```
+  * after building,,,
+  ```
+  docker images
+  docker ps -a
+  ```
+  ```
+  docker exec -it simple-devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+  * work at jenkins hello-world
+  ```
+  vi webapp/src/main/webapp/index.jsp
+  git status
+  git add .
+  git commit -m "modified index file to test with docker"
+  git push
+  ```
+
+### [Return to Contents](#contents)
 
