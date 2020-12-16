@@ -12,6 +12,7 @@
   * Still have problem !
     * always stop auto building !
 * [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
+* [DockerHub Integration with Ansible](#ansible_dochub)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -446,4 +447,18 @@
   ```
 
 ### [Return to Contents](#contents)
+
+
+<a id="ansible_dochub"></a>
+
+## DockerHub Integration with Ansible
+
+* Flow
+  * ![Image](../src/Images/Section05/update001.png)
+
+* commands
+
+### [Return to Contents](#contents)
+
+
 
