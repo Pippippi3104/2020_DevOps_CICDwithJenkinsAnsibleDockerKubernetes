@@ -14,6 +14,7 @@
 * [Update Ansible Playbook to Delete and Create Docker Container](#andible_update)
 * [DockerHub Integration with Ansible](#ansible_dochub)
 * [Tagging Docker Image Using Ansible Playbooks](#ansible_tag)
+* [Jenkins job to deploy on Docker container through DOckerfile](#andsible_jobdoc)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -594,6 +595,33 @@
   ```
 
 ### [Return to Contents](#contents)
+
+
+<a id="andsible_jobdoc"></a>
+
+## Jenkins job to deploy on Docker container through DOckerfile
+
+* commands
+  * work at ansible-control-node docker
+  ```
+  cd ~/.ssh/keys
+  cp -p ダウンロードした鍵.pem ./
+
+  chmod 600 ダウンロードした鍵.pem
+
+  ssh EC2アカウント名@IP -i ダウンロードした鍵.pem (例: ssh ec2-user@11.11.11.11 -i key.pem)
+  ```
+  ```
+  pwd
+  ls
+  cat create-simple-devops-image.yml
+  cat create-simple-devops-project.yml
+  cat hosts
+  ```
+
+### [Return to Contents](#contents)
+
+
 
 
 
