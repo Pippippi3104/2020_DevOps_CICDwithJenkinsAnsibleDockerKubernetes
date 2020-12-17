@@ -13,3 +13,6 @@
 
 * Section05
   * Integration Ansible in CI/CD pipeline
+
+* Section06
+  * Integration Kubernets in CI/CD pipeline
