@@ -15,6 +15,7 @@
 * [DockerHub Integration with Ansible](#ansible_dochub)
 * [Tagging Docker Image Using Ansible Playbooks](#ansible_tag)
 * [Jenkins job to deploy on Docker container through DOckerfile](#andsible_jobdoc)
+* [Jenkins job to deploy a war file on Docker container using Ansible](#andible_last)
 
 ### Trouble
 * Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
@@ -24,6 +25,10 @@
   sudo service docker start
   ```
   * [WSL上でDockerを動かす際に躓いたこと](https://qiita.com/neight0903/items/ef0e2170b712b194c3fc)
+* [Dockerで none なイメージを一括で削除するワンライナー](https://qiita.com/DQNEO/items/e3a03a14beb616630032)
+  ```
+  docker image prune
+  ```
 
 
 <a id="ansible_set"></a>
@@ -617,6 +622,58 @@
   cat create-simple-devops-image.yml
   cat create-simple-devops-project.yml
   cat hosts
+  ```
+
+### [Return to Contents](#contents)
+
+
+<a id="andible_last"></a>
+
+## Jenkins job to deploy a war file on Docker container using Ansible
+
+* Flow
+  * ![Image](../src/Images/Section05/last001.png)
+  * ![Image](../src/Images/Section05/last002.png)
+  * ![Image](../src/Images/Section05/last003.png)
+  * ![Image](../src/Images/Section05/last004.png)
+  * ![Image](../src/Images/Section05/last005.png)
+  * ![Image](../src/Images/Section05/last006.png)
+  * ![Image](../src/Images/Section05/last007.png)
+  * ![Image](../src/Images/Section05/last008.png)
+  * ![Image](../src/Images/Section05/last009.png)
+  * ![Image](../src/Images/Section05/last010.png)
+
+* commands
+  * work at docker-host
+  ```
+  ip addr
+  ```
+  * write at Exec command
+  ```
+  ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-image.yml --limit localhost;
+
+  ansible-playbook -i /opt/docker/hosts /opt/docker/create-simple-devops-project.yml --limit 172.31.2.113;
+  ```
+  * work at docker-host
+  ```
+  docker iamges
+  docker ps -a
+  ```
+  * work at ansible-contorol-node
+    * after building,,,
+  ```
+  docker exec -it simple-devops-container /bin/bash
+  cd webapps.dist/
+  cp -R * ../webapps
+  cd ../webapps
+  ```
+  * work at jenkins hello-world
+  ```
+  vi webapp/src/main/webapp/index.jsp
+  git status
+  git add .
+  git commit -m "modified index file to test with docker"
+  git push
   ```
 
 ### [Return to Contents](#contents)
